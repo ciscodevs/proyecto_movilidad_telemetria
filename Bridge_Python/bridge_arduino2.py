@@ -6,7 +6,7 @@ import json
 import time
 
 # --- 1. CONFIGURACIÓN DE FIREBASE ---
-cred = credentials.Certificate("serviceAccount.json")
+cred = credentials.Certificate("")
 if not firebase_admin._apps:
     firebase_admin.initialize_app(cred)
 db = firestore.client()
@@ -17,7 +17,7 @@ ultimo_estado_seguros = None
 ultimo_estado_cajuela = None
 
 # --- 2. CONFIGURACIÓN MQTT ---
-MQTT_BROKER = "192.168.100.120" 
+MQTT_BROKER = "" 
 MQTT_TOPIC = "movilidad/vehiculo1"
 client = mqtt.Client()
 
